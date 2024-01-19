@@ -20,7 +20,17 @@ class Stack {
   /** push(val): add new value to end of the stack. Returns undefined. */
 
   push(val) {
+    let node = new Node(val);
 
+    if (!this.first) {
+      this.first = node;
+      this.last = node;
+    } else {
+      let temp = this.first;
+      this.first = node;
+      this.first.next = temp;
+    }
+    this.size++;
   }
 
   /** pop(): remove the node from the top of the stack
