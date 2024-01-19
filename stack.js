@@ -37,11 +37,11 @@ class Stack {
    * and return its value. Should throw an error if the stack is empty. */
 
   pop() {
-    if (!this.first) throw new Error("Stack is empty");
+    if (!this.first) throw new Error("Stack is empty.");
 
     let temp = this.first;
 
-    if (this.first = this.last) {
+    if (this.first == this.last) {
       this.last = null;
     }
 
